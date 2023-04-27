@@ -10,3 +10,10 @@ class Post(models.Model):
 
     # def _str_(self):
         # return f'{self.tittle}'
+class comment(models.model):
+    post = models.Foreignkey(Post, on_delte=models. CASCADE)
+    author=models.Forignkey(User, on_delete=models.CASCADE)
+    message=models.CharField(max_lenght=255)
+    create =models. DateTimeFeild(auto_add=True)  
+
+    
